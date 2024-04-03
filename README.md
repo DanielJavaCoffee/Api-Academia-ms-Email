@@ -40,9 +40,13 @@ Para configurar corretamente o Microserviço de Envio de E-mail, siga as instru�
 
 Para configurar o RabbitMQ utilizando Docker, você pode seguir os passos abaixo:
 
+## Configuração do RabbitMQ com Docker
+
+Para configurar o RabbitMQ utilizando Docker, você pode seguir os passos abaixo:
+
 1. Crie um arquivo `docker-compose.yml` na raiz do seu projeto e adicione o seguinte conteúdo:
 
-yaml
+```yaml
 version: "3.2"
 services:
   rabbitmq:
@@ -52,14 +56,15 @@ services:
       - 5672:5672
       - 15672:15672
     volumes:
-      - ~/.docker-conf/rabbitmq/data/:/var/lib/rabbitmq/
-      - ~/.docker-conf/rabbitmq/log/:/var/log/rabbitmq/
+      - /caminho/para/sua/pasta/data/:/var/lib/rabbitmq/
+      - /caminho/para/sua/pasta/log/:/var/log/rabbitmq/
     networks:
       - rabbitmq_curso
 
 networks:
   rabbitmq_curso:
     driver: bridge
+```
 
 ## Integração com a Api-Academia
 
@@ -68,7 +73,7 @@ O Microserviço de Envio de E-mail se integra com a Api-Academia para fornecer n
 Você pode encontrar mais informações sobre a Api-Academia no seguinte repositório:
 [Repositório da Api-Academia](https://github.com/DanielJavaCoffee/Api-Academia)
 
-![Diagrama de Integração entre a Api-Academia e o Microserviço de Envio de E-mail](src/main/resources/static/imagem/rabbit.png)
+![Diagrama de Integração entre a Api-Academia e o Microserviço de Envio de E-mail](src/main/resources/static/rabbit.png)
 
 ## Contribuição
 Contribuições são bem-vindas! Se você deseja contribuir com melhorias para este projeto, sinta-se à vontade para abrir um pull request.
