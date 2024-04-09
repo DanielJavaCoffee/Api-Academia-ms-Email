@@ -74,5 +74,4 @@ Você pode encontrar mais informações sobre a Api-Academia no seguinte reposit
 ## Contribuição
 Contribuições são bem-vindas! Se você deseja contribuir com melhorias para este projeto, sinta-se à vontade para abrir um pull request.
 
-## Licença
-Este projeto está licenciado sob a [MIT License](https://opensource.org/licenses/MIT).
+
